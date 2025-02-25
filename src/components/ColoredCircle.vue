@@ -53,5 +53,9 @@ const props = defineProps({
   white-space: nowrap;
   overflow: hidden;
   box-sizing: border-box;
+  transition: transform 0.3s ease-in-out;
+}
+.circle:hover {
+  transform: scale(1.1);
 }
 </style>
