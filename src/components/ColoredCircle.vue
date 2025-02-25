@@ -31,15 +31,13 @@ const props = defineProps({
   },
   borderWidth: {
     type: Number,
-    default: 2
+    default: 3
   },
   padding: {
     type: Number,
     default: 25
   }
 });
-
-const fontSize = computed(() => Math.min((props.size - props.padding * 2) / 3, 100 / props.text.length * 2));
 </script>
 
 <style scoped>

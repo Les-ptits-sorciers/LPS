@@ -7,7 +7,7 @@ import Header from './components/Header.vue';
     <Header />
     <div class="circle">
       <ColoredCircle text="Partage" color="#FB8B24A6" :size="125" />
-      <ColoredCircle text="Plasir" color="#FB8B24A6" :size="125" />
+      <ColoredCircle text="Plaisir" color="#FB8B24A6" :size="125" />
       <ColoredCircle text="Santé" color="#FB8B24A6" :size="125" />
       <ColoredCircle text="Simplicité" color="#FB8B24A6" :size="125" />
     </div>
