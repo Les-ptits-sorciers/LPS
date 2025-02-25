@@ -1,4 +1,4 @@
-import './base.css';
+@import url('./base.css');
 
 @font-face {
   font-family: 'GeosansLight';
@@ -9,7 +9,7 @@ import './base.css';
 
 @font-face {
   font-family: 'Dream Orphans';
-  src: url('@/assets/fonts/DreamOrphans/Dream Orphans.otf') format('opentype'); /* Correction du format */
+  src: url('@/assets/fonts/DreamOrphans/Dream Orphans.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
