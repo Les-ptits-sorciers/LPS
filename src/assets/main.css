@@ -1,4 +1,4 @@
-@import './base.css';
+import './base.css';
 
 @font-face {
   font-family: 'GeosansLight';
