@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Produits from './components/Produits.vue'
-import EntreprisesCollectivites from "./components/EntreprisesCollectivites.vue";
-import Abonnements from "./components/Abonnements.vue";
-import APropos from "./components/APropos.vue";
+import Produits from './components/Layout/Produits.vue'
+import EntreprisesCollectivites from "./components/Layout/EntreprisesCollectivites.vue";
+import Abonnements from "./components/Layout/Abonnements.vue";
+import APropos from "./components/Layout/APropos.vue";
 
 
 const routes = [
