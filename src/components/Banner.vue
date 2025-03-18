@@ -39,7 +39,7 @@ const props = defineProps({
   height: 150px;
   object-fit: cover;
   border-radius: 6px;
-  border: 3ps solid #FB8B24A6;
+  border: 2px solid #6BD425;
 }
 
 .banner-title {
