@@ -2,14 +2,14 @@
 
 @font-face {
   font-family: 'GeosansLight';
-  src: url('@/assets/fonts/GeoSansLight/GeoSansLight.ttf') format('truetype');
+  src: url('./fonts/GeoSansLight/GeoSansLight.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Dream Orphans';
-  src: url('@/assets/fonts/DreamOrphans/Dream Orphans.otf') format('opentype');
+  src: url('./fonts/DreamOrphans/Dream Orphans.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -21,6 +21,5 @@ body {
 #app {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   font-weight: normal;
 }
