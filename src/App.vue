@@ -38,7 +38,9 @@ const banners = [
 </script>
 
 <template>
-  <Header />
+   <!-- 
+    <Header /> 
+    -->
   
   <div id="app">
     <NavBar />
