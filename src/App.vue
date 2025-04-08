@@ -40,7 +40,7 @@ const banners = [
 <template>
    <!-- 
     <Header /> 
-    -->
+    --> 
   
   <div id="app">
     <NavBar />
