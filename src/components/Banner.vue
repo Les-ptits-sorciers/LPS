@@ -1,15 +1,21 @@
 <template>
-  <div class="banner-container">
-    <div v-for="(item, index) in banners" :key="index" class="banner-item">
-      <img :src="item.image" :alt="item.title" class="banner-image" />
-      <h3 class="banner-title">{{ item.title }}</h3>
-      <p class="banner-description">{{ item.description }}</p>
+  <div class="banner-wrapper">
+    <div class="banner-container">
+      <div
+        v-for="(item, index) in banners"
+        :key="index"
+        class="banner-item"
+        :class="{ 'with-border': index !== 0 }"
+      >
+        <img :src="item.image" :alt="item.title" class="banner-image" />
+        <h3 class="banner-title">{{ item.title }}</h3>
+        <p class="banner-description">{{ item.description }}</p>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-
 const props = defineProps({
   banners: {
     type: Array,
@@ -19,27 +25,41 @@ const props = defineProps({
 </script>
 
 <style scoped>
-.banner-container {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 1rem;
-  text-align: center;
+.banner-wrapper {
   padding: 1rem;
+  border: 2px solid #6BD425;
+  border-radius: 12px;
+  background-color: transparent;
+  box-sizing: border-box;
 }
 
+.banner-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Les items prennent 25% sur desktop, 50% sur tablette, 100% sur mobile */
 .banner-item {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1 0 25%;
   padding: 1rem;
+  text-align: center;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.with-border {
+  border-left: 1px solid #e5e7eb;
 }
 
 .banner-image {
   width: 100%;
   height: 150px;
   object-fit: cover;
-  border-radius: 6px;
-  border: 2px solid #6BD425;
+  border-radius: 0;
+  border: none;
+  margin-bottom: 0.5rem;
 }
 
 .banner-title {
@@ -53,15 +73,18 @@ const props = defineProps({
   color: #4b5563;
 }
 
-@media (min-width: 640px) {
-  .banner-container {
-    grid-template-columns: repeat(2, 1fr);
+/* Responsive */
+@media (max-width: 1023px) {
+  .banner-item {
+    flex: 1 0 50%;
   }
 }
 
-@media (min-width: 1024px) {
-  .banner-container {
-    grid-template-columns: repeat(4, 1fr);
+@media (max-width: 639px) {
+  .banner-item {
+    flex: 1 0 100%;
+    border-left: none !important;
+    border-top: 1px solid #e5e7eb;
   }
 }
 </style>
