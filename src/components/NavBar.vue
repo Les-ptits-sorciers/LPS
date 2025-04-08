@@ -15,15 +15,17 @@ const toggleMenu = () => {
     </div>
 
     <button class="burger" @click="toggleMenu">☰</button>
+
     <ul :class="['nav-links', { open: menuOpen }]">
       <li><router-link to="/produits">Découvrir les produits</router-link></li>
       <li><router-link to="/abonnements">Abonnements</router-link></li>
       <li><router-link to="/entreprises-collectivites">Entreprises & Collectivités</router-link></li>
       <li><router-link to="/a-propos">À propos</router-link></li>
     </ul>
-    <div class="icons">
-      <img src="@/assets/icone_user.png" alt="User" class="icon" />
-      <img src="@/assets/icone_panier.png" alt="Cart" class="icon" />
+
+    <div class="actions">
+      <router-link to="/login" class="btn-login">Se connecter</router-link>
+      <router-link to="/panier" class="btn-cart">Mon panier</router-link>
     </div>
   </nav>
 </template>
@@ -60,14 +62,38 @@ const toggleMenu = () => {
   opacity: 0.7;
 }
 
-.icons {
+.actions {
   display: flex;
   gap: 15px;
+  align-items: center;
 }
 
-.icon {
-  height: 50px;
-  cursor: pointer;
+.btn-login,
+.btn-cart {
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-login {
+  background-color: #FB8B24;
+  color: white;
+}
+
+.btn-login:hover {
+  background-color: #f59e0b;
+}
+
+.btn-cart {
+  background-color: #D90368;
+  color: white;
+}
+
+.btn-cart:hover {
+  background-color: #ec4899;
 }
 
 .burger {
@@ -95,12 +121,16 @@ const toggleMenu = () => {
     padding: 10px 0;
   }
 
+  .nav-links.open {
+    display: flex;
+  }
+
   .nav-links li {
     margin: 10px 0;
     font-family: 'Dream Orphans', sans-serif;
   }
 
-  .icons {
+  .actions {
     display: none;
   }
 }

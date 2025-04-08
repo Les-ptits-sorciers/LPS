@@ -8,11 +8,9 @@ import Banner from './components/Banner.vue';
 import { ref } from "vue";
 
 const products = ref([
-  { image: "https://via.placeholder.com/150", title: "Produit 1", description: "Description du produit 1" },
-  { image: "https://via.placeholder.com/150", title: "Produit 2", description: "Description du produit 2" },
-  { image: "https://via.placeholder.com/150", title: "Produit 3", description: "Description du produit 3" },
-  { image: "https://via.placeholder.com/150", title: "Produit 4", description: "Description du produit 4" },
-  { image: "https://via.placeholder.com/150", title: "Produit 5", description: "Description du produit 5" },
+  { image: "https://cdn.pixabay.com/photo/2024/11/14/14/58/grass-9197163_1280.jpg", title: "Produit 1", description: "Description du produit 1" },
+  { image: "https://cdn.pixabay.com/photo/2025/03/26/09/08/ai-generated-9494063_960_720.jpg", title: "Produit 2", description: "Description du produit 2" },
+  { image: "https://cdn.pixabay.com/photo/2024/04/10/22/52/autumn-8688876_960_720.jpg", title: "Produit 3", description: "Description du produit 3" },
 ]);
 
 const banners = [
@@ -53,16 +51,17 @@ const banners = [
       <p>Les P'tits Sorciers réinventent le goûter pour allier :</p>
       
       <div class="circle">
-        <ColoredCircle text="Partage" color="#FB8B24A6" :size="125" />
-        <ColoredCircle text="Plaisir" color="#FB8B24A6" :size="125" />
-        <ColoredCircle text="Santé" color="#FB8B24A6" :size="125" />
-        <ColoredCircle text="Simplicité" color="#FB8B24A6" :size="125" />
+        <ColoredCircle text="Partage" color="#FB8B24" :size="125" />
+        <ColoredCircle text="Plaisir" color="#FB8B24" :size="125" />
+        <ColoredCircle text="Santé" color="#FB8B24" :size="125" />
+        <ColoredCircle text="Simplicité" color="#FB8B24" :size="125" />
       </div>
       
       <p>Découvrez une sélection de goûters savoureux, préparés à partir d'ingrédients locaux provenant de producteurs de votre région. 
         Nos créations varient selon les saisons et les premières matières disponibles, garantissant des produits frais, sains et adaptés à vos besoins.</p>
 
-      <Banner :banners="banners" />
+      <h2>Découvrez nos goûters</h2>
+      <ProductBanner :products="products" />
       
       <div class="extra-info">
         <p>Que vous soyez parents, entreprises ou collectivités, commandez en grande quantité et recevez vos douceurs directement chez vous.</p>
@@ -70,8 +69,7 @@ const banners = [
           Cuisinez vos goûters avec vos enfants et partagez des instants gourmands tout en leur apprenant à manger mieux.</p>
       </div>
       
-      <h2>Découvrez nos goûters</h2>
-      <ProductBanner :products="products" />
+      <Banner :banners="banners" />
       
     </div>
   </div>

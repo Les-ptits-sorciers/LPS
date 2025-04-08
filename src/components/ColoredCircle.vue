@@ -2,19 +2,18 @@
   <div 
     class="circle" 
     :style="{ 
-      borderColor: color, 
+      backgroundColor: color, 
       width: size + 'px', 
       height: size + 'px', 
-      fontSize: fontSize + 'px', 
-      borderWidth: borderWidth + 'px',
+      fontSize: fontSize + 'px',
       padding: padding + 'px'
-    }">
+    }"
+  >
     {{ text }}
   </div>
 </template>
 
 <script setup>
-
 const props = defineProps({
   text: {
     type: String,
@@ -22,15 +21,15 @@ const props = defineProps({
   },
   color: {
     type: String,
-    default: '#FB8B24A6'
+    default: '#FB8B24'
   },
   size: {
     type: Number,
     default: 100
   },
-  borderWidth: {
+  fontSize: {
     type: Number,
-    default: 3
+    default: 16
   },
   padding: {
     type: Number,
@@ -45,10 +44,9 @@ const props = defineProps({
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  color: #D90368;
+  color: white; /* Texte en blanc */
   font-weight: bold;
   text-align: center;
-  border-style: solid;
   white-space: nowrap;
   overflow: hidden;
   box-sizing: border-box;
