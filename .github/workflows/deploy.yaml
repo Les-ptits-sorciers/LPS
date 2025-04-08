@@ -1,0 +1,26 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      -main
+
+jobs:
+  deploy:
+    runs-on: ubunutu-latest
+
+    steps:
+      - name: Checkout code
+      - uses: actions/checkout@v2
+
+      - name: Pull Latest Code and Restart Application
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ seecrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /var/www/LPS
+            git pull origin main
+            npm install npm run build 
+            sudo systemctl restart nginx
