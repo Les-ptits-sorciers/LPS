@@ -38,13 +38,12 @@ const banners = [
 </script>
 
 <template>
-   <!-- 
-    <Header /> 
-    --> 
   
   <div id="app">
     <NavBar />
     <router-view />
+
+    <Header /> 
     
     <div class="content">
       
