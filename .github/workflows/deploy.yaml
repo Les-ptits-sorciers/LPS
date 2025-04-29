@@ -13,7 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Pull Latest Code and Restart Application
+      - name: Deploy application via SSH
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
@@ -24,4 +24,3 @@ jobs:
             git pull origin main
             npm install
             npm run build
-            sudo systemctl restart
