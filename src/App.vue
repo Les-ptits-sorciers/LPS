@@ -10,7 +10,7 @@ import { ref } from "vue";
 const products = ref([
   { image: "https://cdn.pixabay.com/photo/2024/11/14/14/58/grass-9197163_1280.jpg", title: "Produit 1", description: "Description du produit 1" },
   { image: "https://cdn.pixabay.com/photo/2025/03/26/09/08/ai-generated-9494063_960_720.jpg", title: "Produit 2", description: "Description du produit 2" },
-  { image: "https://cdn.pixabay.com/photo/2024/04/10/22/52/autumn-8688876_960_720.jpg", title: "Produit 3", description: "Description du produit 3" },
+  { image: "https://cdn.pixabay.com/photo/2023/04/26/16/20/vegetables-7952764_1280.jpg", title: "Produit 3", description: "Description du produit 3" },
 ]);
 
 const banners = [
