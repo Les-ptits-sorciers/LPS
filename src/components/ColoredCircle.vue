@@ -1,7 +1,7 @@
 <template>
-  <div 
-    class="circle" 
-    :style="{ 
+  <div
+    class="circle"
+    :style="{
       backgroundColor: color, 
       width: size + 'px', 
       height: size + 'px', 
@@ -44,7 +44,7 @@ const props = defineProps({
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  color: white; /* Texte en blanc */
+  color: white;
   font-weight: bold;
   text-align: center;
   white-space: nowrap;

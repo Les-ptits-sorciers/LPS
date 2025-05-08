@@ -18,8 +18,15 @@ body {
   font-family: 'Dream Orphans', sans-serif;
 }
 
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background-color: white !important;
+    color: black !important;
+  }
+}
+
 #app {
-  max-width: 1200px;
+  max-width:90%;
   margin: 0 auto;
-  padding: 0 1rem; /* marge intérieure à gauche et à droite */
+  padding: 0 1rem;
 }

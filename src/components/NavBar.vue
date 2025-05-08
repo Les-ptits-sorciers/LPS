@@ -11,7 +11,9 @@ const toggleMenu = () => {
 <template>
   <nav class="navbar">
     <div class="logo">
-      <img src="@/assets/logo_navbar.png" alt="Logo" />
+      <router-link to="/">
+        <img src="@/assets/logo_navbar.png" alt="Logo" />
+      </router-link>
     </div>
 
     <button class="burger" @click="toggleMenu">☰</button>
@@ -24,8 +26,8 @@ const toggleMenu = () => {
     </ul>
 
     <div class="actions">
-      <router-link to="/login" class="btn-login">Se connecter</router-link>
-      <router-link to="/panier" class="btn-cart">Mon panier</router-link>
+      <router-link to="/" class="btn-login">Se connecter</router-link>
+      <router-link to="/" class="btn-cart">Mon panier</router-link>
     </div>
   </nav>
 </template>

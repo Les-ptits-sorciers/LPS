@@ -38,7 +38,7 @@ const props = defineProps({
   flex-wrap: wrap;
 }
 
-/* Les items prennent 25% sur desktop, 50% sur tablette, 100% sur mobile */
+
 .banner-item {
   flex: 1 0 25%;
   padding: 1rem;

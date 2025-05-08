@@ -2,10 +2,13 @@
   <div class="product-container">
     <div class="product-grid">
       <div
-        v-for="(product, index) in products"
-        :key="index"
-        class="product-item"
-        :class="{ 'center-last': isOdd && index === products.length - 1 }"
+          v-for="(product, index) in products"
+          :key="index"
+          :class="{
+          'product-item': true,
+          'center-last': isOdd && index === products.length - 1
+        }"
+          @click="openModal(product)"
       >
         <img :src="product.image" :alt="product.title" class="product-image" />
         <h3 class="product-title">{{ product.title }}</h3>
@@ -13,23 +16,42 @@
       </div>
     </div>
   </div>
+
+  <ModalProduct
+      v-if="isModalOpen"
+      :product="selectedProduct"
+      :isOpen="isModalOpen"
+      @close="closeModal"
+  />
 </template>
 
-<script>
-export default {
-  props: {
-    products: {
-      type: Array,
-      required: true,
-    },
+<script setup>
+import { ref, computed } from 'vue'; // Ajout de computed ici
+import ModalProduct from './ModalProduct.vue';
+
+const props = defineProps({
+  products: {
+    type: Array,
+    required: true,
   },
-  computed: {
-    isOdd() {
-      return this.products.length % 2 !== 0;
-    },
-  },
+});
+
+const selectedProduct = ref(null);
+const isModalOpen = ref(false);
+
+const openModal = (product) => {
+  selectedProduct.value = product;
+  isModalOpen.value = true;
 };
+
+const closeModal = () => {
+  isModalOpen.value = false;
+  selectedProduct.value = null;
+};
+
+const isOdd = computed(() => props.products.length % 2 !== 0); // computed correctement utilisé
 </script>
+
 
 <style scoped>
 .product-container {
