@@ -29,7 +29,7 @@
 
 .header-content {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 2rem;
   flex-wrap: wrap;
@@ -43,15 +43,17 @@
 .gradient-title {
   font-family: 'Dream Orphans', sans-serif;
   font-weight: 700;
-  font-size: 45px;
-  line-height: 54px;
-  background: linear-gradient(90deg, #FFFFFF, #6BD425);
+  font-size: 54px;
+  line-height: 100%;
+  letter-spacing: 0.04em;
+  background: linear-gradient(90deg, #FFFFFF 0%, #A7E400 40%, #6BD425 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
-  font-size: 20px;
+  font-family: 'GeosansLight', sans-serif;
+  font-size: 40px;
   font-weight: bold;
   color: white;
   margin-top: 1rem;
@@ -59,9 +61,10 @@
 }
 
 .description {
+  font-family: 'GeosansLight', sans-serif;
   color: white;
   margin-top: 0.5rem;
-  font-size: 16px;
+  font-size: 26px;
   max-width: 500px;
 }
 

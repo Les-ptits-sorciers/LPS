@@ -1,9 +1,9 @@
 <script setup>
-import ColoredCircle from '../components/ColoredCircle.vue'
-import Header from '../components/Header.vue'
-import NavBar from '../components/NavBar.vue'
-import ProductBanner from '../components/ProductBanner.vue'
-import Banner from '../components/Banner.vue'
+import ColoredCircle from '../ColoredCircle.vue'
+import Header from '../Header.vue'
+import NavBar from '../NavBar.vue'
+import ProductBanner from '../ProductBanner.vue'
+import Banner from '../Banner.vue'
 
 import { ref } from 'vue'
 

@@ -42,12 +42,15 @@ const toggleMenu = () => {
 }
 
 .logo img {
-  height: 50px;
+  width: 60%;
+  max-width: 120px;
+  min-width: 50px;
+  height: auto;
 }
 
 .nav-links {
   display: flex;
-  gap: 25px;
+  gap: 35px;
   list-style: none;
   padding: 0;
 }
@@ -55,9 +58,11 @@ const toggleMenu = () => {
 .nav-links a {
   color: black;
   text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: bold;
   transition: 0.3s;
+  font-family: 'GeosansLight', sans-serif;
+  line-height: 100%;
 }
 
 .nav-links a:hover {
@@ -68,6 +73,7 @@ const toggleMenu = () => {
   display: flex;
   gap: 15px;
   align-items: center;
+  font-family: 'GeosansLight', sans-serif;
 }
 
 .btn-login,
