@@ -45,12 +45,13 @@ const props = defineProps({
   justify-content: center;
   border-radius: 50%;
   color: white;
-  font-weight: bold;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
   box-sizing: border-box;
   transition: transform 0.3s ease-in-out;
+  font-family: 'Dream Orphans', sans-serif;
+  letter-spacing: 0.08em;
 }
 .circle:hover {
   transform: scale(1.1);

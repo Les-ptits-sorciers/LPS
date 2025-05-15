@@ -4,6 +4,7 @@ import EntreprisesCollectivites from "@/components/Layout/EntreprisesCollectivit
 import Produits from "@/components/Layout/Produits.vue";
 import Abonnements from "@/components/Layout/Abonnements.vue";
 import APropos from "@/components/Layout/APropos.vue";
+import ProductPage from "@/components/Layout/ProductPage.vue";
 
 
 let routes;
@@ -13,6 +14,8 @@ routes = [
   {path: '/entreprises-collectivites', component: EntreprisesCollectivites},
   {path: '/abonnements', component: Abonnements},
   {path: '/a-propos', component: APropos},
+  { path: '/produit/:id', component: ProductPage, props: true }
+
 ];
 
 const router = createRouter({

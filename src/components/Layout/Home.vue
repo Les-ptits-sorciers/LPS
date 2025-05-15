@@ -43,7 +43,6 @@ const banners = [
     <Header />
 
     <div class="content">
-      <h2>Réenchantez le goûter !</h2>
       <p>Les P'tits Sorciers réinventent le goûter pour allier :</p>
 
       <div class="circle">

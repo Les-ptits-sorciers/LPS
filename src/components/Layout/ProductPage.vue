@@ -1,6 +1,8 @@
 <script setup>
+import { useRoute } from 'vue-router'
 
-import NavBar from "@/components/NavBar.vue";
+const route = useRoute()
+const productId = parseInt(route.params.id)
 
 const products = [
   {
@@ -23,48 +25,36 @@ const products = [
     title: 'Produit 4',
     description: 'Description 4',
   }
-];
+]
+
+const product = products[productId]
 </script>
 
 <template>
-  <NavBar />
-  <div class="product-list">
-    <router-link
-        v-for="(product, index) in products"
-        :key="index"
-        :to="`/product/${index}`"
-        class="product-card"
-    >
-      <img :src="product.image" alt="" class="product-image" />
-      <h3>{{ product.title }}</h3>
+  <div v-if="product" class="product-detail">
+    <img :src="product.image" class="detail-image" alt="" />
+    <div>
+      <h1>{{ product.title }}</h1>
       <p>{{ product.description }}</p>
-    </router-link>
+    </div>
+  </div>
+  <div v-else>
+    <p>Produit non trouvé.</p>
   </div>
 </template>
 
-
 <style scoped>
-.product-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+.product-detail {
+  display: flex;
   gap: 2rem;
-  padding: 1rem;
+  padding: 2rem;
 }
 
-.product-card {
-  border: 1px solid #8BC34A;
-  padding: 1rem;
-  border-radius: 5px;
-  text-decoration: none;
-  color: inherit;
-}
-
-.product-image {
-  width: 100%;
-  height: 200px;
+.detail-image {
+  width: 400px;
+  height: auto;
   object-fit: cover;
-  border: 1px solid #8BC34A;
-  border-radius: 4px;
-  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
 }
 </style>
