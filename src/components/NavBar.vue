@@ -80,7 +80,6 @@ const toggleMenu = () => {
 .btn-cart {
   padding: 8px 16px;
   border-radius: 9999px;
-  font-weight: bold;
   text-decoration: none;
   font-size: 16px;
   transition: background-color 0.3s ease;
