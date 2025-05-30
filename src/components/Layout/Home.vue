@@ -4,6 +4,7 @@ import Header from '../Header.vue'
 import NavBar from '../NavBar.vue'
 import ProductBanner from '../ProductBanner.vue'
 import Banner from '../Banner.vue'
+import Footer from '../Footer.vue'
 
 import { ref } from 'vue'
 
@@ -69,6 +70,7 @@ const banners = [
       </div>
 
       <Banner :banners="banners" />
+      <Footer />
     </div>
   </div>
 </template>
