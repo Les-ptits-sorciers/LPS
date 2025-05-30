@@ -105,7 +105,7 @@ p {
   margin-bottom: 30px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .circle {
     flex-direction: column;
     gap: 20px;

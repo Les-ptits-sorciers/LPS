@@ -29,7 +29,6 @@ const props = defineProps({
 
 <style scoped>
 .banner-wrapper {
-
   border: 2px solid #6BD425;
   border-radius: 12px;
   background-color: transparent;
@@ -47,30 +46,72 @@ const props = defineProps({
   overflow: hidden;
   height: 200px;
   margin: 0;
+  border-radius: 0; /* reset */
+}
+
+/* Arrondi sur les coins selon position et responsive */
+@media (min-width: 1024px) {
+  .banner-item:first-child {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+
+  .banner-item:last-child {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 640px) {
+  /* 2 colonnes */
+  .banner-item:nth-child(1) {
+    border-top-left-radius: 12px;
+  }
+  .banner-item:nth-child(2) {
+    border-top-right-radius: 12px;
+  }
+  .banner-item:nth-last-child(2) {
+    border-bottom-left-radius: 12px;
+  }
+  .banner-item:last-child {
+    border-bottom-right-radius: 12px;
+  }
+}
+
+@media (max-width: 639px) {
+  /* 1 colonne */
+  .banner-item:first-child {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  .banner-item:last-child {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
 }
 
 .with-border {
   border-left: 1px solid #e5e7eb;
 }
 
-.banner-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.9); /* assombrit toute l’image */
-  z-index: 0;
-}
-
+.banner-image,
 .image-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.3); /* optionnel : renforce la lisibilité */
+  object-fit: cover;
+  filter: brightness(0.9);
+  z-index: 0;
+
+  /* héritage du border-radius pour coins arrondis */
+  border-radius: inherit;
+}
+
+.image-overlay {
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 
