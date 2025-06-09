@@ -42,9 +42,9 @@ const toggleMenu = () => {
 }
 
 .logo img {
-  width: 60%;
-  max-width: 120px;
-  min-width: 50px;
+  width: 100%;
+  max-width: 160px;
+  min-width: 120px;
   height: auto;
 }
 
