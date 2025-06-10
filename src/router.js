@@ -6,7 +6,7 @@ import Abonnements from "@/components/Layout/Abonnements.vue";
 import APropos from "@/components/Layout/APropos.vue";
 import ProductPage from "@/components/Layout/ProductPage.vue";
 import WorkInProgress from './components/Layout/WorkInProgress.vue';
-import NotFound from './components/NotFound.vue';
+import NotFound from './components/Layout/NotFound.vue';
 
 
 let routes;
