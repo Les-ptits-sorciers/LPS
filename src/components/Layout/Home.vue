@@ -40,7 +40,6 @@ const banners = [
 
 <template>
   <div id="home">
-    <NavBar />
     <Header />
 
     <div class="content">

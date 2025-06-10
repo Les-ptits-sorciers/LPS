@@ -1,7 +1,9 @@
 <script setup>
+import NavBar from "@/components/NavBar.vue";
 </script>
 
 <template>
+  <NavBar />
   <header class="header">
     <div class="header-content">
       <div class="text-section">
@@ -21,19 +23,22 @@
 
 <style scoped>
 .header {
+  min-height: 83vh;
   padding: 2rem;
   background: linear-gradient(90deg, #D90368 0%, #FB8B24 100%);
   color: white;
   border-radius: 5px;
+  align-items: center; /* pour centrer verticalement si possible */
 }
 
 .header-content {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 2rem;
   flex-wrap: wrap;
 }
+
 
 .text-section {
   flex: 1;
