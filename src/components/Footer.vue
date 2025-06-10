@@ -14,10 +14,10 @@
       <div class="footer-menu">
         <h3 class="footer-title">Menu</h3>
         <ul>
-          <li><a href="#">Découvrir les produits</a></li>
-          <li><a href="#">Abonnements</a></li>
-          <li><a href="#">Entreprises & Collectivités</a></li>
-          <li><a href="#">À propos</a></li>
+          <li><a href="/produits">Découvrir les produits</a></li>
+          <li><a href="/en-construction">Abonnements</a></li>
+          <li><a href="/en-construction">Entreprises & Collectivités</a></li>
+          <li><a href="/en-construction">À propos</a></li>
         </ul>
       </div>
 
@@ -25,7 +25,7 @@
       <div class="footer-menu">
         <h3 class="footer-title">Suivez-nous</h3>
         <ul>
-          <li><a href="#">Instagram</a></li>
+          <li><a href="https://www.instagram.com/les.petits.sorciers?igsh=MXA1eXpqN3lhZ28zcA==">Instagram</a></li>
           <li><a href="#">Facebook</a></li>
           <li><a href="#">LinkedIn</a></li>
         </ul>

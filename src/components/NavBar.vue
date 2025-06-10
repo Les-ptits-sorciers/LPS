@@ -100,7 +100,7 @@ const toggleMenu = () => {
 }
 
 .btn-cart:hover {
-  background-color: #ec4899;
+  background-color: #EC4899;
 }
 
 .burger {

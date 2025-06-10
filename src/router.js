@@ -16,8 +16,9 @@ routes = [
   {path: '/entreprises-collectivites', component: EntreprisesCollectivites},
   {path: '/abonnements', component: Abonnements},
   {path: '/a-propos', component: APropos},
-  { path: '/produit/:id', component: ProductPage, props: true }
-
+  {path: '/produit/:id', component: ProductPage, props: true },
+  {path: '/en-construction', component: WorkInProgress},
+  {path: '/:pathMatch(.*)*', component: NotFound}
 ];
 
 const router = createRouter({
