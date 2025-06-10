@@ -3,7 +3,7 @@
     <div class="footer-grid">
       <!-- Colonne 1 : Logo et slogan -->
       <div class="footer-logo">
-        <img src="/public/assets/Logo V.Finale.png" alt="Logo" class="logo" />
+        <img src="/public/assets/logo.png" alt="Logo" class="logo" />
         <p class="slogan">Réenchantez le goûter !</p>
       </div>
 
