@@ -5,8 +5,9 @@ import Produits from "@/components/Layout/Produits.vue";
 import Abonnements from "@/components/Layout/Abonnements.vue";
 import APropos from "@/components/Layout/APropos.vue";
 import ProductPage from "@/components/Layout/ProductPage.vue";
-import WorkInProgress from './components/Layout/WorkInProgress.vue';
-import NotFound from './components/NotFound.vue';
+import WorkInProgress from '@/components/Layout/WorkInProgress.vue';
+import NotFound from '@/components/Layout/NotFound.vue';
+import LegalMentions from '@/components/Legal/LegalMentions.vue';
 
 
 let routes;
@@ -16,6 +17,7 @@ routes = [
   {path: '/entreprises-collectivites', component: EntreprisesCollectivites},
   {path: '/abonnements', component: Abonnements},
   {path: '/a-propos', component: APropos},
+  {path: '/mentions-legales', component: LegalMentions},
   {path: '/produit/:id', component: ProductPage, props: true },
   {path: '/en-construction', component: WorkInProgress},
   {path: '/:pathMatch(.*)*', component: NotFound}
