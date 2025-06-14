@@ -30,11 +30,14 @@ import NavBar from "@/components/NavBar.vue";
 }
 
 .header-content {
+  margin: 2rem auto;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 2rem;
   flex-wrap: wrap;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .text-section {
@@ -54,7 +57,6 @@ import NavBar from "@/components/NavBar.vue";
 }
 
 .subtitle {
-  font-family: 'GeosansLight', sans-serif;
   font-size: 40px;
   font-weight: bold;
   color: white;
@@ -63,7 +65,6 @@ import NavBar from "@/components/NavBar.vue";
 }
 
 .description {
-  font-family: 'GeosansLight', sans-serif;
   color: white;
   margin-top: 0.5rem;
   font-size: 26px;
@@ -71,14 +72,13 @@ import NavBar from "@/components/NavBar.vue";
 }
 
 .cta-button {
-  margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
+  margin-top: 2rem;
+  padding: 0.75rem 3rem;
   background-color: #FB8B24;
   color: white;
   border: none;
   border-radius: 999px;
-  font-weight: bold;
-  font-size: 16px;
+  font-size: 19px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }

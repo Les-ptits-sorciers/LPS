@@ -1,11 +1,11 @@
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-const menuOpen = ref(false);
+const menuOpen = ref(false)
 
 const toggleMenu = () => {
-  menuOpen.value = !menuOpen.value;
-};
+  menuOpen.value = !menuOpen.value
+}
 </script>
 
 <template>
@@ -16,18 +16,34 @@ const toggleMenu = () => {
       </router-link>
     </div>
 
+    <!-- Burger button (mobile only) -->
     <button class="burger" @click="toggleMenu">☰</button>
 
-    <ul :class="['nav-links', { open: menuOpen }]">
+    <!-- Desktop nav -->
+    <ul class="nav-links desktop">
       <li><router-link to="/produits">Découvrir les produits</router-link></li>
       <li><router-link to="/abonnements">Abonnements</router-link></li>
       <li><router-link to="/entreprises-collectivites">Entreprises & Collectivités</router-link></li>
       <li><router-link to="/a-propos">À propos</router-link></li>
     </ul>
 
-    <div class="actions">
+    <div class="actions desktop">
       <router-link to="/" class="btn-login">Se connecter</router-link>
       <router-link to="/" class="btn-cart">Mon panier</router-link>
+    </div>
+
+    <!-- Mobile menu -->
+    <div v-if="menuOpen" class="mobile-menu">
+      <ul class="nav-links">
+        <li><router-link to="/produits">Découvrir les produits</router-link></li>
+        <li><router-link to="/abonnements">Abonnements</router-link></li>
+        <li><router-link to="/entreprises-collectivites">Entreprises & Collectivités</router-link></li>
+        <li><router-link to="/a-propos">À propos</router-link></li>
+      </ul>
+      <div class="actions">
+        <router-link to="/" class="btn-login">Se connecter</router-link>
+        <router-link to="/" class="btn-cart">Mon panier</router-link>
+      </div>
     </div>
   </nav>
 </template>
@@ -39,6 +55,8 @@ const toggleMenu = () => {
   justify-content: space-between;
   padding: 10px 20px;
   background: white;
+  position: relative;
+  z-index: 10;
 }
 
 .logo img {
@@ -53,6 +71,7 @@ const toggleMenu = () => {
   gap: 35px;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .nav-links a {
@@ -62,7 +81,6 @@ const toggleMenu = () => {
   font-weight: bold;
   transition: 0.3s;
   font-family: 'GeosansLight', sans-serif;
-  line-height: 100%;
 }
 
 .nav-links a:hover {
@@ -81,7 +99,7 @@ const toggleMenu = () => {
   padding: 8px 16px;
   border-radius: 9999px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 22px;
   transition: background-color 0.3s ease;
 }
 
@@ -105,36 +123,50 @@ const toggleMenu = () => {
 
 .burger {
   display: none;
-  font-size: 24px;
+  font-size: 28px;
   background: none;
   border: none;
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+/* ======= MOBILE ONLY ======= */
+@media (max-width: 900px) {
+  .desktop {
+    display: none;
+  }
+
   .burger {
     display: block;
   }
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
+  .mobile-menu {
     position: absolute;
-    top: 60px;
+    top: 100%;
     left: 0;
     width: 100%;
     background: white;
     text-align: center;
     padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 9;
   }
 
-  .nav-links li {
-    margin: 10px 0;
-    font-family: 'Dream Orphans', sans-serif;
+  .mobile-menu .nav-links {
+    flex-direction: column;
+    display: flex;
+    gap: 15px;
   }
 
-  .actions {
-    display: none;
+  .mobile-menu .actions {
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+    padding-top: 10px;
+  }
+
+  .mobile-menu .btn-login,
+  .mobile-menu .btn-cart {
+    margin: 0 auto;
   }
 }
 </style>

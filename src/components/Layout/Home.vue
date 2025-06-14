@@ -1,17 +1,36 @@
 <script setup>
 import ColoredCircle from '../ColoredCircle.vue'
 import Header from '../Header.vue'
-import ProductBanner from '../ProductBanner.vue'
+import Madeleine from "@/components/Madeleine.vue";
 import Banner from '../Banner.vue'
 import Footer from '../Footer.vue'
 
 import { ref } from 'vue'
 
 const products = ref([
-  { id: 1, image: "https://cdn.pixabay.com/photo/2024/11/14/14/58/grass-9197163_1280.jpg", title: "Produit 1", description: "Description du produit 1" },
-  { id: 2, image: "https://cdn.pixabay.com/photo/2025/03/26/09/08/ai-generated-9494063_960_720.jpg", title: "Produit 2", description: "Description du produit 2" },
-  { id: 3, image: "https://cdn.pixabay.com/photo/2023/04/02/18/21/fruit-market-7895200_1280.jpg", title: "Produit 3", description: "Description du produit 3" },
+  {
+    id: 1,
+    image: "https://cdn.pixabay.com/photo/2024/11/14/14/58/grass-9197163_1280.jpg",
+    title: "Produit 1",
+    description: "Description du produit 1",
+    price: 5.90
+  },
+  {
+    id: 2,
+    image: "https://cdn.pixabay.com/photo/2025/03/26/09/08/ai-generated-9494063_960_720.jpg",
+    title: "Produit 2",
+    description: "Description du produit 2",
+    price: 4.50
+  },
+  {
+    id: 3,
+    image: "https://cdn.pixabay.com/photo/2023/04/02/18/21/fruit-market-7895200_1280.jpg",
+    title: "Produit 3",
+    description: "Description du produit 3",
+    price: 6.20
+  }
 ])
+
 
 const banners = [
   {
@@ -42,6 +61,18 @@ const banners = [
     <Header />
 
     <div class="content">
+      <h2>Découvrez nos goûters</h2>
+      <div class="product-grid">
+        <Madeleine
+            v-for="product in products"
+            :key="product.id"
+            :image="product.image"
+            :title="product.title"
+            :description="product.description"
+            :price="product.price"
+        />
+      </div>
+
       <p>Les P'tits Sorciers réinventent le goûter pour allier :</p>
 
       <div class="circle">
@@ -56,9 +87,6 @@ const banners = [
         Nos créations varient selon les saisons et les premières matières disponibles, garantissant des produits frais, sains et adaptés à vos besoins.
       </p>
 
-      <h2>Découvrez nos goûters</h2>
-      <ProductBanner :products="products" />
-
       <div class="extra-info">
         <p>Que vous soyez parents, entreprises ou collectivités, commandez en grande quantité et recevez vos douceurs directement chez vous.</p>
         <p>
@@ -68,18 +96,19 @@ const banners = [
       </div>
 
       <Banner :banners="banners" />
-      <Footer />
     </div>
+    <Footer />
   </div>
 </template>
 
 <style scoped>
 .content {
-  padding: 20px;
+  padding: 20px 60px 0 60px;
 }
 
+
 h2 {
-  margin-top: 20px;
+  margin-top: 1px;
   margin-bottom: 10px;
   color: #D90368;
 }
@@ -96,6 +125,16 @@ p {
   width: 100%;
   padding: 20px 0;
   margin-bottom: 30px;
+}
+
+.product-grid {
+  display: flex;
+  flex-direction: row; /* optionnel car c'est par défaut */
+  gap: 20px;
+  justify-content: space-between; /* ou center / start selon ton besoin */
+  flex-wrap: nowrap; /* empêche de passer à la ligne */
+  overflow-x: auto;  /* permet le scroll horizontal si trop de cartes */
+  padding-bottom: 20px;
 }
 
 .extra-info {

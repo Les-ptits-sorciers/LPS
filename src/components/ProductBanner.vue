@@ -49,7 +49,7 @@ const closeModal = () => {
   selectedProduct.value = null;
 };
 
-const isOdd = computed(() => props.products.length % 2 !== 0); // computed correctement utilisé
+const isOdd = computed(() => props.products.length % 2 !== 0);
 </script>
 
 
@@ -61,18 +61,17 @@ const isOdd = computed(() => props.products.length % 2 !== 0); // computed corre
 }
 
 .product-grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
-/* 2 colonnes dès 640px */
 @media (min-width: 640px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Centrer le dernier produit si impair */
   .center-last {
     grid-column: 1 / -1;
     place-self: center;
@@ -80,13 +79,11 @@ const isOdd = computed(() => props.products.length % 2 !== 0); // computed corre
   }
 }
 
-/* 3 colonnes dès 1024px */
 @media (min-width: 1024px) {
   .product-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* On enlève le centrage car 3 items ne posent pas de problème */
   .center-last {
     grid-column: auto;
     place-self: auto;
