@@ -12,22 +12,22 @@ const products = ref([
     id: 1,
     image: "https://cdn.pixabay.com/photo/2024/11/14/14/58/grass-9197163_1280.jpg",
     title: "Produit 1",
-    description: "Description du produit 1",
-    price: 5.90
+    description: "Lorem ipsum dolor sit amet. Est dolorem iusto ut minima perspiciatis qui ",
+    price: "5.90"
   },
   {
     id: 2,
     image: "https://cdn.pixabay.com/photo/2025/03/26/09/08/ai-generated-9494063_960_720.jpg",
     title: "Produit 2",
-    description: "Description du produit 2",
-    price: 4.50
+    description: "Lorem ipsum dolor sit amet. Est dolorem iusto ut minima perspiciatis qui ",
+    price: "4.50"
   },
   {
     id: 3,
     image: "https://cdn.pixabay.com/photo/2023/04/02/18/21/fruit-market-7895200_1280.jpg",
     title: "Produit 3",
-    description: "Description du produit 3",
-    price: 6.20
+    description: "Lorem ipsum dolor sit amet. Est dolorem  ",
+    price: "6.20"
   }
 ])
 
@@ -129,13 +129,14 @@ p {
 
 .product-grid {
   display: flex;
-  flex-direction: row; /* optionnel car c'est par défaut */
+  flex-wrap: wrap;
   gap: 20px;
-  justify-content: space-between; /* ou center / start selon ton besoin */
-  flex-wrap: nowrap; /* empêche de passer à la ligne */
-  overflow-x: auto;  /* permet le scroll horizontal si trop de cartes */
-  padding-bottom: 20px;
+  justify-content: center; /* <-- important : centre chaque ligne */
 }
+
+
+
+
 
 .extra-info {
   margin-top: 30px;

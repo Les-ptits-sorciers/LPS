@@ -33,21 +33,18 @@ defineProps({
 
 <style scoped>
 .card {
-  width: 300px;
+  width: 100%;
+  max-width: 400px;
+  flex: 1 1 280px; /* <== important pour flex grow/shrink */
+  aspect-ratio: 3 / 4;
+  display: flex;
+  flex-direction: column;
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   background-color: white;
   font-family: 'Arial', sans-serif;
-}
-
-.image-container {
-  position: relative;
-}
-
-.product-image {
-  width: 100%;
-  display: block;
+  margin: 10px;
 }
 
 .badge {
@@ -70,13 +67,27 @@ defineProps({
 }
 
 
+.image-container {
+  flex: 2;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .info {
-  background-color: #FB8B24;
+  flex: 1;
+  background: linear-gradient(#ED0068 0%, #FB8B24 100%);
   color: white;
   padding: 16px;
   border-bottom-left-radius: 18px;
   border-bottom-right-radius: 18px;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -86,16 +97,17 @@ defineProps({
 }
 
 .header h2 {
-  font-size: 18px;
+  font-size: 25px;
+  font-family: 'Dream Orphans', sans-serif;
   margin: 0;
 }
 
 .price {
-  font-size: 18px;
+  font-size: 25px;
 }
 
 .description {
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 8px;
   line-height: 1.4;
 }
@@ -103,14 +115,14 @@ defineProps({
 .actions {
   display: flex;
   justify-content: center;
-  margin-top: 16px;
   font-family: 'GeosansLight', sans-serif;
 }
 
 .separator {
+  margin-top: auto;
+  margin-bottom: 12px;
   height: 1px;
-  background-color: #f5c77b;
-  margin: 16px 0;
+  background-color: #FDCDB4;
   border-radius: 1px;
 }
 
@@ -120,7 +132,7 @@ defineProps({
   border-radius: 9999px;
   text-decoration: none;
   font-size: 18px;
-  background-color: #D90368;
+  background-color: #FDCDB4;
   color: white;
   border: none;
   cursor: pointer;
@@ -130,4 +142,25 @@ defineProps({
 .btn-login:hover {
   background-color: #f59e0b;
 }
+
+@media (max-width: 768px) {
+  .card {
+    max-width: 85vw;
+  }
+
+  .header h2,
+  .price {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .btn-login {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
 </style>
