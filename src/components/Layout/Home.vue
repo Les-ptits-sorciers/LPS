@@ -1,7 +1,7 @@
 <script setup>
 import ColoredCircle from '../ColoredCircle.vue'
 import Header from '../Header.vue'
-import Madeleine from "@/components/Madeleine.vue";
+import ProductCard from "@/components/ProductCard.vue";
 import Banner from '../Banner.vue'
 import Footer from '../Footer.vue'
 
@@ -61,17 +61,6 @@ const banners = [
     <Header />
 
     <div class="content">
-      <h2>Découvrez nos goûters</h2>
-      <div class="product-grid">
-        <Madeleine
-            v-for="product in products"
-            :key="product.id"
-            :image="product.image"
-            :title="product.title"
-            :description="product.description"
-            :price="product.price"
-        />
-      </div>
 
       <p>Les P'tits Sorciers réinventent le goûter pour allier :</p>
 
@@ -86,6 +75,17 @@ const banners = [
         Découvrez une sélection de goûters savoureux, préparés à partir d'ingrédients locaux provenant de producteurs de votre région.
         Nos créations varient selon les saisons et les premières matières disponibles, garantissant des produits frais, sains et adaptés à vos besoins.
       </p>
+      <h2>Toutes nos offres</h2>
+      <div class="product-grid">
+        <ProductCard
+            v-for="product in products"
+            :key="product.id"
+            :image="product.image"
+            :title="product.title"
+            :description="product.description"
+            :price="product.price"
+        />
+      </div>
 
       <div class="extra-info">
         <p>Que vous soyez parents, entreprises ou collectivités, commandez en grande quantité et recevez vos douceurs directement chez vous.</p>

@@ -12,7 +12,7 @@ import NavBar from "@/components/NavBar.vue";
         <p class="description">
           Offrez à vos enfants le plaisir de goûters sains, pour des moments de partage et de joie en toute simplicité.
         </p>
-        <button class="cta-button">Découvrir les produits</button>
+        <button class="cta-button">Découvrir nos offres</button>
       </div>
       <div class="image-section">
         <img src="https://cdn.pixabay.com/photo/2015/05/25/14/27/garden-783344_1280.jpg" alt="Illustration magique" />

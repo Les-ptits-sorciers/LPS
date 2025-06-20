@@ -1,12 +1,12 @@
 <script setup>
 
 import NavBar from "@/components/NavBar.vue";
-import Madeleine from "@/components/Madeleine.vue";
+import ProductCard from "@/components/ProductCard.vue";
 </script>
 
 <template>
   <NavBar />
-  <Madeleine/>
+  <ProductCard/>
 </template>
 
 <style scoped>

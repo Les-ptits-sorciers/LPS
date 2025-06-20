@@ -5,7 +5,7 @@
     <main class="work-section">
       <div class="content-center">
         <h1>Page en cours de développement</h1>
-        <img src="/public/assets/workinprogress.svg" alt="SVG Image" class="svg-image">
+        <img src="/assets/workinprogress.svg" alt="SVG Image" class="svg-image">
         <router-link to="/" class="home-link">Retour à l’accueil</router-link>
       </div>
     </main>

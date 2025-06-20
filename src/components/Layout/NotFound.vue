@@ -5,7 +5,7 @@
     <main class="not-found">
       <div class="content-center">
         <h1>Oups, une erreur est survenue...</h1>
-        <img src="/public/assets/404_error.svg" alt="SVG Image" class="svg-image">
+        <img src="/assets/404_error.svg" alt="SVG Image" class="svg-image">
         <router-link to="/" class="home-link">Retour à l’accueil</router-link>
       </div>
     </main>

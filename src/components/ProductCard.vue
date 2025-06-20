@@ -3,7 +3,7 @@
     <div class="image-container">
       <img :src="image" :alt="title" class="product-image" />
       <div class="badge">
-        <img src="../../public/assets/icone1.png" alt="Icône" class="badge-icon" />
+        <img src="/assets/icone1.png" alt="Icône" class="badge-icon" />
       </div>
     </div>
     <div class="info">

@@ -12,7 +12,7 @@ const toggleMenu = () => {
   <nav class="navbar">
     <div class="logo">
       <router-link to="/">
-        <img src="../../public/assets/logo.png" alt="Logo" />
+        <img src="/assets/logo.png" alt="Logo" />
       </router-link>
     </div>
 
