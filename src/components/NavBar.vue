@@ -19,15 +19,19 @@ const toggleMenu = () => {
     <button class="burger" @click="toggleMenu">☰</button>
 
     <ul :class="['nav-links', { open: menuOpen }]">
-      <li><router-link to="/produits">Découvrir les produits</router-link></li>
+      <!-- <li><router-link to="/produits">Découvrir les produits</router-link></li>
       <li><router-link to="/abonnements">Abonnements</router-link></li>
       <li><router-link to="/entreprises-collectivites">Entreprises & Collectivités</router-link></li>
-      <li><router-link to="/a-propos">À propos</router-link></li>
+      <li><router-link to="/a-propos">À propos</router-link></li> -->
+      <li><router-link to="/en-construction">Découvrir les produits</router-link></li>
+      <li><router-link to="/en-construction">Abonnements</router-link></li>
+      <li><router-link to="/en-construction">Entreprises & Collectivités</router-link></li>
+      <li><router-link to="/en-construction">À propos</router-link></li>
     </ul>
 
     <div class="actions">
-      <router-link to="/" class="btn-login">Se connecter</router-link>
-      <router-link to="/" class="btn-cart">Mon panier</router-link>
+      <router-link to="/en-construction" class="btn-login">Se connecter</router-link>
+      <router-link to="/en-construction" class="btn-cart">Mon panier</router-link>
     </div>
   </nav>
 </template>
