@@ -51,7 +51,7 @@
     <div class="footer-bottom">
       <p class="copyright">© 2025 Les Ptit's Sorciers. Tous droits réservés.</p>
       <div class="footer-links">
-        <a href="#">Mentions légales</a>
+        <a href="/mentions-legales">Mentions légales</a>
         <a href="#">Politique de confidentialité</a>
         <a href="#">CGV</a>
       </div>
