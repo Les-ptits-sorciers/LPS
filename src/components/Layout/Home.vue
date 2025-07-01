@@ -8,9 +8,9 @@ import Footer from '../Footer.vue'
 import { ref } from 'vue'
 
 const products = ref([
-  { id: 1, image: "https://cdn.pixabay.com/photo/2024/11/14/14/58/grass-9197163_1280.jpg", title: "Produit 1", description: "Description du produit 1" },
-  { id: 2, image: "https://cdn.pixabay.com/photo/2025/03/26/09/08/ai-generated-9494063_960_720.jpg", title: "Produit 2", description: "Description du produit 2" },
-  { id: 3, image: "https://cdn.pixabay.com/photo/2023/04/02/18/21/fruit-market-7895200_1280.jpg", title: "Produit 3", description: "Description du produit 3" },
+  { id: 1, image: "https://cdn.pixabay.com/photo/2024/01/18/14/26/snack-8517056_1280.jpg", title: "Produit 1", description: "Description du produit 1" },
+  { id: 2, image: "https://cdn.pixabay.com/photo/2023/07/20/11/00/cookie-8139062_1280.jpg", title: "Produit 2", description: "Description du produit 2" },
+  { id: 3, image: "https://cdn.pixabay.com/photo/2018/11/06/19/06/cookies-3798903_1280.jpg", title: "Produit 3", description: "Description du produit 3" },
 ])
 
 const banners = [
