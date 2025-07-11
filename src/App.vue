@@ -1,8 +1,9 @@
 <template>
-  <router-view />
+  <PageLoader />
 </template>
 
 <script setup>
+import PageLoader from './components/Loader.vue'
 </script>
 
 <style>
