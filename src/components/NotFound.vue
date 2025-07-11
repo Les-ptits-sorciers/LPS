@@ -1,6 +1,5 @@
 <template>
   <div class="page-wrapper">
-    <NavBar />
 
     <main class="not-found">
       <h1 class="title">404&nbsp;- Page introuvable</h1>
@@ -8,13 +7,11 @@
       <router-link to="/" class="home-link">Retour à l’accueil</router-link>
     </main>
 
-    <Footer />
   </div>
 </template>
 
 <script setup>
-import NavBar from '@/components/NavBar.vue'
-import Footer from '@/components/Footer.vue'
+
 </script>
 
 <style scoped>

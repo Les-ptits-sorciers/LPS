@@ -1,6 +1,6 @@
 <script setup>
 
-import NavBar from "@/components/NavBar.vue";
+
 
 const products = [
   {
@@ -27,7 +27,7 @@ const products = [
 </script>
 
 <template>
-  <NavBar />
+
   <div class="product-list">
     <router-link
         v-for="(product, index) in products"

@@ -3,8 +3,6 @@ import ColoredCircle from '../ColoredCircle.vue'
 import Header from '../Header.vue'
 import ProductBanner from '../ProductBanner.vue'
 import Banner from '../Banner.vue'
-import Footer from '../Footer.vue'
-import BackToTop from '../BackToTop.vue'
 
 import { ref } from 'vue'
 
@@ -69,9 +67,7 @@ const banners = [
       </div>
 
       <Banner :banners="banners" />
-      <Footer />
     </div>
-    <BackToTop />
   </div>
 </template>
 

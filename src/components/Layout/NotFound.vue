@@ -1,6 +1,6 @@
 <template>
   <div class="page-wrapper">
-    <NavBar />
+
 
     <main class="not-found">
       <div class="content-center">
@@ -10,13 +10,11 @@
       </div>
     </main>
 
-    <Footer />
   </div>
 </template>
 
 <script setup>
-import NavBar from '@/components/NavBar.vue';
-import Footer from '@/components/Footer.vue';
+
 </script>
 
 <style scoped>
