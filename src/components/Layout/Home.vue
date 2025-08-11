@@ -3,7 +3,7 @@ import ColoredCircle from '../ColoredCircle.vue'
 import Header from '../Header.vue'
 import ProductBanner from '../ProductBanner.vue'
 import Banner from '../Banner.vue'
-import Footer from '../Footer.vue'
+import BoxCard from '../BoxCard.vue'
 
 import { ref } from 'vue'
 
@@ -35,6 +35,38 @@ const banners = [
     description: 'Sans additifs ni conservateurs, juste du naturel et du goût.',
   }
 ]
+
+const boxes = [
+  {
+    id: 1,
+    title: 'Box annuelle',
+    category: 'Maternelle',
+    price: 'XX,XX€',
+    description: 'Votre kit goûter adapté aux 3 à 5 ans',
+    image: 'https://cdn.pixabay.com/photo/2018/11/06/19/06/cookies-3798903_1280.jpg'
+  },
+  {
+    id: 2,
+    title: 'Box mensuelle',
+    category: 'Primaire',
+    price: 'XX,XX€',
+    description: 'Votre kit goûter adapté aux 6 à 11 ans',
+    image: 'https://cdn.pixabay.com/photo/2023/07/20/11/00/cookie-8139062_1280.jpg'
+  },
+  {
+    id: 3,
+    title: 'Box découverte',
+    category: 'Adolescent',
+    price: 'XX,XX€',
+    description: 'Votre kit goûter adapté aux 12 à 16 ans',
+    image: 'https://cdn.pixabay.com/photo/2024/01/18/14/26/snack-8517056_1280.jpg'
+  }
+]
+
+const handleAddToCart = (boxId) => {
+  console.log('Ajouter au panier la box:', boxId)
+  // add cart logic here
+}
 </script>
 
 <template>
@@ -59,6 +91,20 @@ const banners = [
       <h2>Découvrez nos goûters</h2>
       <ProductBanner :products="products" />
 
+      <!-- Section des Box -->
+      <div class="boxes-section">
+        <BoxCard 
+          v-for="box in boxes" 
+          :key="box.id"
+          :title="box.title"
+          :category="box.category"
+          :price="box.price"
+          :description="box.description"
+          :image="box.image"
+          @add-to-cart="() => handleAddToCart(box.id)"
+        />
+      </div>
+
       <div class="extra-info">
         <p>Que vous soyez parents, entreprises ou collectivités, commandez en grande quantité et recevez vos douceurs directement chez vous.</p>
         <p>
@@ -68,7 +114,6 @@ const banners = [
       </div>
 
       <Banner :banners="banners" />
-      <Footer />
     </div>
   </div>
 </template>
@@ -103,9 +148,21 @@ p {
   margin-bottom: 30px;
 }
 
+.boxes-section {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+
 @media (max-width: 640px) {
   .circle {
     flex-direction: column;
+    gap: 20px;
+  }
+  
+  .boxes-section {
     gap: 20px;
   }
 }
