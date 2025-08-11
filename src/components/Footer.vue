@@ -14,7 +14,7 @@
       <div class="footer-menu">
         <h3 class="footer-title">Menu</h3>
         <ul>
-          <li><a href="/produits">Découvrir les produits</a></li>
+          <li><a href="/en-construction">Découvrir les produits</a></li>
           <li><a href="/en-construction">Abonnements</a></li>
           <li><a href="/en-construction">Entreprises & Collectivités</a></li>
           <li><a href="/en-construction">À propos</a></li>
@@ -52,8 +52,8 @@
       <p class="copyright">© 2025 Les Ptit's Sorciers. Tous droits réservés.</p>
       <div class="footer-links">
         <a href="/mentions-legales">Mentions légales</a>
-        <a href="#">Politique de confidentialité</a>
-        <a href="#">CGV</a>
+        <a href="/en-construction">Politique de confidentialité</a>
+        <a href="/en-construction">CGV</a>
       </div>
     </div>
   </footer>

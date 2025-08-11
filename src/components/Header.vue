@@ -7,7 +7,7 @@
     <div class="header-content">
       <div class="text-section">
         <h1 class="gradient-title">Les P'tits Sorciers</h1>
-        <h2 class="subtitle">Réanchantez le goûter !</h2>
+        <h2 class="subtitle">Réenchantez le goûter !</h2>
         <p class="description">
           Offrez à vos enfants le plaisir de goûters sains, pour des moments de partage et de joie en toute simplicité.
         </p>
