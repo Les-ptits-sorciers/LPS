@@ -4,6 +4,7 @@ import Header from '../Header.vue'
 import ProductBanner from '../ProductBanner.vue'
 import Banner from '../Banner.vue'
 import BoxCard from '../BoxCard.vue'
+import OffersSlider from '../OffersSlider.vue'
 
 import { ref } from 'vue'
 
@@ -67,6 +68,55 @@ const handleAddToCart = (boxId) => {
   console.log('Ajouter au panier la box:', boxId)
   // add cart logic here
 }
+
+// Données des offres d'abonnement
+const offers = [
+  {
+    title: "Titre de l'offre",
+    description: "Description",
+    price: "XX,XX€",
+    period: "/mois",
+    ctaText: "Texte CTA",
+    subtitle: "1 box au choix parmi les offres :",
+    features: [
+      "Annuelles",
+      "Saisonnières", 
+      "Événements"
+    ],
+    note: "",
+    highlighted: false
+  },
+  {
+    title: "Titre de l'offre",
+    description: "Description",
+    price: "XX,XX€",
+    period: "/mois",
+    ctaText: "Texte CTA",
+    subtitle: "1 box au choix parmi les offres :",
+    features: [
+      "Annuelles",
+      "Saisonnières",
+      "Événements"
+    ],
+    note: "1 activité au choix parmi toute une sélection...",
+    highlighted: true // Cette offre sera mise en avant
+  },
+  {
+    title: "Titre de l'offre", 
+    description: "Description",
+    price: "XX,XX€",
+    period: "/mois",
+    ctaText: "Texte CTA",
+    subtitle: "1 box au choix parmi les offres :",
+    features: [
+      "Annuelles",
+      "Saisonnières",
+      "Événements"
+    ],
+    note: "",
+    highlighted: false
+  }
+]
 </script>
 
 <template>
@@ -104,6 +154,13 @@ const handleAddToCart = (boxId) => {
           @add-to-cart="() => handleAddToCart(box.id)"
         />
       </div>
+
+      <!-- Section des Offres d'Abonnement -->
+      <OffersSlider 
+        :offers="offers" 
+        :autoPlay="true" 
+        :autoPlayDelay="6000"
+      />
 
       <div class="extra-info">
         <p>Que vous soyez parents, entreprises ou collectivités, commandez en grande quantité et recevez vos douceurs directement chez vous.</p>
