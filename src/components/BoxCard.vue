@@ -1,4 +1,6 @@
 <script setup>
+import AnimatedCartButton from './AnimatedCartButton.vue'
+
 defineProps({
   title: {
     type: String,
@@ -22,7 +24,7 @@ defineProps({
   },
   buttonText: {
     type: String,
-    default: 'Ajouter à mon panier'
+    default: 'Ajouter au panier'
   }
 })
 
@@ -49,9 +51,11 @@ const handleAddToCart = () => {
       
       <p class="description">{{ description }}</p>
       
-      <button class="add-to-cart-btn" @click="handleAddToCart">
-        <span>{{ buttonText }}</span>
-      </button>
+      <AnimatedCartButton 
+        :first-text="buttonText" 
+        second-text="Ajouté !"
+        @add-to-cart="handleAddToCart"
+      />
     </div>
   </div>
 </template>
@@ -117,36 +121,6 @@ const handleAddToCart = () => {
   line-height: 1.4;
   margin-bottom: 25px;
   font-weight: normal;
-}
-
-.add-to-cart-btn {
-  background: white !important;
-  border: 2px solid #ED0068;
-  border-radius: 25px;
-  padding: 12px 30px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-  font-family: 'DreamOrphans', Arial, sans-serif;
-  position: relative;
-}
-
-.add-to-cart-btn span {
-  background: linear-gradient(to right, #ED0068 0%, #FF8300 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  display: inline-block;
-}
-
-.add-to-cart-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(237, 0, 104, 0.3);
-}
-
-.add-to-cart-btn:active {
-  transform: translateY(0);
 }
 
 @media (max-width: 768px) {
